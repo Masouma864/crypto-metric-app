@@ -1,10 +1,10 @@
 import React from "react";
-import coin from coins
-class coins extends Component {
+import Coin from Coins
+class Coins extends Component {
     state = {  } 
     render() { 
         return ();
     }
 }
  
-export default coins;
+export default Coins;
