@@ -1,13 +1,11 @@
 import './App.css';
+import Coins from './components/Coins/Coins';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-
-        Learn React
-
-      </header>
+      <header />
+      <Coins />
     </div>
   );
 }
