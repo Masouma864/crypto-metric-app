@@ -1,9 +1,15 @@
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-// import './Coins.css';
+import Image from 'react-bootstrap/Row';
+import { useDispatch, useSelector } from 'react-redux';
+import {Link} from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import {fetchAssets} from '../redux/Coins/coinsSlice'
+import './Coins.css';
 
-const Coins = () => (
+const Coins = () => {
+
   <Container>
     <Row>
       <Col className="greeting">
@@ -35,5 +41,5 @@ const Coins = () => (
     </Row>
   </Container>
 
-);
+};
 export default Coins;
