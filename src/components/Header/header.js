@@ -1,11 +1,9 @@
-import { Nav } from 'react-bootstrap';
-
 import './Header.css';
 
 const Header = () => {
-  <Nav className="navbar">
+  <nav className="navbar">
     <h1>Moneyster</h1>
-  </Nav>;
+  </nav>;
 };
 
 export default Header;
