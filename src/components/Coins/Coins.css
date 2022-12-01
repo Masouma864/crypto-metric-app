@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #5788e4;
+  max-width: 100%;
+  box-sizing: border-box;
+}
