@@ -1,6 +1,6 @@
 import { Nav } from 'react-bootstrap';
 
-import './Header.css';
+import './header.css';
 
 const Header = () => {
   <Nav className="navbar">

@@ -1,6 +1,6 @@
-import { createSlice, createAsycnTunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncTunk } from '@reduxjs/toolkit';
 
-const fetchDetail = createAsycnTunk('coins/Detail', async (id) => {
+const fetchDetail = createAsyncTunk('coins/Detail', async (id) => {
   const response = await fetch(`https://api.coinstats.app/public/v1/coins/${id}`);
   const detail = await response.json();
   const { coin } = detail;

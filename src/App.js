@@ -1,7 +1,7 @@
 import './App.css';
-import Coins from './components/Coins/Coins';
 import { Route, Routes } from 'react-router-dom';
-import Header from './components/Header/Header';
+import Coins from './components/Coins/Coins';
+import Header from './components/Header/header';
 
 function App() {
   return (
