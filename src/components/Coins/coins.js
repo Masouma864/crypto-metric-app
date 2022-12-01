@@ -1,51 +1,47 @@
+import './Coins.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { fetchAssets } from '../../redux/Coins/coinsSlice';
-import './Coins.css';
 
 const Coins = () => {
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
+
   const assets = useSelector((state) => state.coins);
   useEffect(() => {
     if (!assets.length) {
-      [
-        dispatch(fetchAssets()),
-      ];
+      dispatch(fetchAssets());
     }
   });
 
   const [searchcoin, setSearchcoin] = useState('');
-  const onSeach = (e) => {
-    e.preventDefault();
-    setSearchcoin(e.targer.value);
+  const onSearch = (e) => {
+    setSearchcoin(e.target.value);
   };
 
-  if (searchcoin.length > 0) {
-    const searched = assets.filter(
-      (filteredCoin) => filteredCoin.name.toLowerCase().includes(searchcoin.toLowerCase())
-                || filteredCoin.symbol.toLowerCase().includes(searchcoin.toLowerCase()),
-    );
-  }
+  const searched = assets.filter(
+    (filteredCoin) => filteredCoin.name.toLowerCase().includes(searchcoin.toLowerCase())
+      || filteredCoin.symbol.toLowerCase().includes(searchcoin.toLowerCase()),
+  );
 
   return (
-
     <div className="container">
       <div className="search">
         <input
           type="text"
+          placeholder="Search..."
           value={searchcoin}
           onChange={onSearch}
         />
       </div>
       <div className="coins">
-        {searched.map((asset) => (
+        {searched.map((asset, index) => (
           <div
-            className="coll"
+            className={(index % 2 === 1) ? 'odd-bg coin-card' : 'coin-card'}
             key={`${asset.asset_id}${Math.random * 10}`}
           >
             <Link
-              className="coin-card"
+              className="one-coin"
               Key={asset.asset_id}
               to={`/coin/${asset.id}`}
             >
@@ -53,13 +49,10 @@ const Coins = () => {
                 <p>{asset.price}</p>
               </div>
               <div>
-                <div>
-                  <img className="icon" src={asset.icon} alt={asset.name} />
-                </div>
-                <div className="asset-detail">
-                  <span className="asset-code">{asset.symbol}</span>
-                  <span className="asset-name">{asset.name}</span>
-                </div>
+                <img className="icon" src={asset.icon} alt={asset.name.substring(0, 2)} />
+              </div>
+              <div className="coin-detail">
+                <p className="coin-code">{asset.symbol}</p>
               </div>
             </Link>
           </div>
@@ -68,4 +61,5 @@ const Coins = () => {
     </div>
   );
 };
+
 export default Coins;

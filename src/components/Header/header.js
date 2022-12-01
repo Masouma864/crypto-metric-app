@@ -4,8 +4,7 @@ import { UilAngleLeft, UilMicrophone, UilSetting } from '@iconscout/react-unicon
 import './header.css';
 
 const Header = () => (
-  <nav className="navbar">
-    <h1>Moneyster</h1>
+
   <nav className="navbar flex">
     <div className="back">
       <Link to="/">

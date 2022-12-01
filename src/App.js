@@ -1,8 +1,8 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Coins from './components/Coins/Coins';
-import Header from './components/Header/header';
-import Coin from './components/Coins/Coin';
+import Header from './components/Header/Header';
+import Coin from './components/Coins/coin';
 
 function App() {
   return (
