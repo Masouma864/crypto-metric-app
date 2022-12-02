@@ -2,7 +2,7 @@ import './Coins.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { fetchAssets } from '../../redux/Coins/coinsSlice';
+import { fetchAssests } from '../../redux/Coins/coinsSlice';
 
 const Coins = () => {
   const dispatch = useDispatch();
@@ -10,7 +10,7 @@ const Coins = () => {
   const assets = useSelector((state) => state.coins);
   useEffect(() => {
     if (!assets.length) {
-      dispatch(fetchAssets());
+      dispatch(fetchAssests());
     }
   });
 
@@ -29,19 +29,18 @@ const Coins = () => {
       <div className="search">
         <input
           type="text"
-          placeholder="Search..."
           value={searchcoin}
           onChange={onSearch}
         />
       </div>
       <div className="coins">
-        {searched.map((asset, index) => (
+        {searched.map((asset) => (
           <div
-            className={(index % 2 === 1) ? 'odd-bg coin-card' : 'coin-card'}
+            className="coll"
             key={`${asset.asset_id}${Math.random * 10}`}
           >
             <Link
-              className="one-coin"
+              className="coin-card"
               Key={asset.asset_id}
               to={`/coin/${asset.id}`}
             >
@@ -49,10 +48,13 @@ const Coins = () => {
                 <p>{asset.price}</p>
               </div>
               <div>
-                <img className="icon" src={asset.icon} alt={asset.name.substring(0, 2)} />
-              </div>
-              <div className="coin-detail">
-                <p className="coin-code">{asset.symbol}</p>
+                <div>
+                  <img className="icon" src={asset.icon} alt={asset.name} />
+                </div>
+                <div className="asset-detail">
+                  <span className="asset-code">{asset.symbol}</span>
+                  <span className="asset-name">{asset.name}</span>
+                </div>
               </div>
             </Link>
           </div>
