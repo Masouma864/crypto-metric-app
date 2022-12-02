@@ -49,13 +49,13 @@ const Coins = () => {
                 <p>{asset.price}</p>
               </div>
               <div>
-              <div>
-                <img className="icon" src={asset.icon} alt={asset.name} />
-              </div>
-              <div className="asset-detail">
-                <span className="asset-code">{asset.symbol}</span>
-                <span className="asset-name">{asset.name}</span>
-              </div>
+                <div>
+                  <img className="icon" src={asset.icon} alt={asset.name} />
+                </div>
+                <div className="asset-detail">
+                  <span className="asset-code">{asset.symbol}</span>
+                  <span className="asset-name">{asset.name}</span>
+                </div>
               </div>
             </Link>
           </div>
