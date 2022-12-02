@@ -13,12 +13,11 @@ const initialState = [];
 const coinsSlice = createSlice({
   name: 'coin',
   initialState,
-  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchAssests.fulfilled, (state, action) => action.payload);
   },
 });
 
-const { actions, reducer } = coinsSlice;
-export { actions, fetchAssests };
+const { reducer } = coinsSlice;
+export { fetchAssests };
 export default reducer;
