@@ -13,7 +13,6 @@ const initialState = [];
 const detailSlice = createSlice({
   name: 'detail',
   initialState,
-  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchDetail.fulfilled, (state, action) => action.payload);
   },

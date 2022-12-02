@@ -21,7 +21,7 @@ const Coins = () => {
 
   const searched = assets.filter(
     (filteredCoin) => filteredCoin.name.toLowerCase().includes(searchcoin.toLowerCase())
-      || filteredCoin.symbol.toLowerCase().includes(searchcoin.toLowerCase()),
+            || filteredCoin.symbol.toLowerCase().includes(searchcoin.toLowerCase()),
   );
 
   return (
@@ -35,13 +35,13 @@ const Coins = () => {
         />
       </div>
       <div className="coins">
-        {searched.map((asset, index) => (
+        {searched.map((asset) => (
           <div
-            className={(index % 2 === 1) ? 'odd-bg coin-card' : 'coin-card'}
+            className="coll"
             key={`${asset.asset_id}${Math.random * 10}`}
           >
             <Link
-              className="one-coin"
+              className="coin-card"
               Key={asset.asset_id}
               to={`/coin/${asset.id}`}
             >
@@ -49,10 +49,13 @@ const Coins = () => {
                 <p>{asset.price}</p>
               </div>
               <div>
-                <img className="icon" src={asset.icon} alt={asset.name.substring(0, 2)} />
+              <div>
+                <img className="icon" src={asset.icon} alt={asset.name} />
               </div>
-              <div className="coin-detail">
-                <p className="coin-code">{asset.symbol}</p>
+              <div className="asset-detail">
+                <span className="asset-code">{asset.symbol}</span>
+                <span className="asset-name">{asset.name}</span>
+              </div>
               </div>
             </Link>
           </div>
