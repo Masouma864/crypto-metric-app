@@ -2,7 +2,7 @@ import './Coins.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { fetchAssets } from '../../redux/Coins/coinsSlice';
+import { fetchAssests } from '../../redux/Coins/coinsSlice';
 
 const Coins = () => {
   const dispatch = useDispatch();
@@ -10,7 +10,7 @@ const Coins = () => {
   const assets = useSelector((state) => state.coins);
   useEffect(() => {
     if (!assets.length) {
-      dispatch(fetchAssets());
+      dispatch(fetchAssests());
     }
   });
 
@@ -21,7 +21,7 @@ const Coins = () => {
 
   const searched = assets.filter(
     (filteredCoin) => filteredCoin.name.toLowerCase().includes(searchcoin.toLowerCase())
-            || filteredCoin.symbol.toLowerCase().includes(searchcoin.toLowerCase()),
+      || filteredCoin.symbol.toLowerCase().includes(searchcoin.toLowerCase()),
   );
 
   return (
@@ -29,7 +29,6 @@ const Coins = () => {
       <div className="search">
         <input
           type="text"
-          placeholder="Search..."
           value={searchcoin}
           onChange={onSearch}
         />

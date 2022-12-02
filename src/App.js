@@ -1,8 +1,9 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
+import Header from './components/Header/Header';
+// eslint-disable-next-line import/extensions
 import Coins from './components/Coins/Coins';
-import Header from './components/Header/header';
-import Coin from './components/Coins/coin';
+import Coin from './components/Coins/Coin';
 
 function App() {
   return (
@@ -12,7 +13,6 @@ function App() {
         <Route path="/" element={<Coins />} />
         <Route path="/coin/:id/" element={<Coin />} />
       </Routes>
-
     </div>
   );
 }

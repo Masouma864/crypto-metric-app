@@ -5,7 +5,8 @@ import detailReducer from './Coins/coinSlice';
 const store = configureStore({
   reducer: {
     coins: cryptoReducer,
-    Detail: detailReducer,
+    detail: detailReducer,
   },
 });
+
 export default store;

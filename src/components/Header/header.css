@@ -1,7 +1,5 @@
 .navbar {
   background-color: #4369b2;
   color: white;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 30px;
+  padding: 10px;
 }

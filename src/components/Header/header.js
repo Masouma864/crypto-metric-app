@@ -1,10 +1,8 @@
+import './Header.css';
 import { Link } from 'react-router-dom';
 import { UilAngleLeft, UilMicrophone, UilSetting } from '@iconscout/react-unicons';
 
-import './header.css';
-
 const Header = () => (
-
   <nav className="navbar flex">
     <div className="back">
       <Link to="/">
