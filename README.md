@@ -1,8 +1,5 @@
 <div align="center">
 
-  <img src="https://raw.githubusercontent.com/microverseinc/readme-template/master/murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
   <h3><b>Microverse README Template</b></h3>
 
 </div>
@@ -36,10 +33,7 @@
 
 **crypto-metric-app** is a mobile web application to that is used to check a list of metrics (numeric values) that will be created by making use of React and Redux and Data from the ACNH API.
 
-<div align="center">
-  <a href="https://ibb.co/DbFM7dv"><img src="https://i.ibb.co/MhH1Rdt/3-devices-white.png" alt="3-devices-white" border="0"></a>
-  <br/>
-</div>
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -71,7 +65,7 @@
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- [Stock Exchange Metrics App][Live Demo](https://moneyster.netlify.app/)
+- [crypto-metric-app][Live Demo](https://moneyster.netlify.app/)
 
 ## Loom Presentation Video Link
 - [Project Documentation](https://www.loom.com/share/0ae641f884a74d2184746bbb2de4e63b)
