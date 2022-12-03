@@ -67,7 +67,7 @@
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- [Stock Exchange Metrics App][Live Demo](https://moneyster.netlify.app/)
+- [crypto-metric-app][Live Demo](https://moneyster.netlify.app/)
 
 ## Loom Presentation Video Link
 - [Project Documentation](https://www.loom.com/share/0ae641f884a74d2184746bbb2de4e63b)
