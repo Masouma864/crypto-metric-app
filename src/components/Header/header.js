@@ -10,7 +10,7 @@ const Header = () => (
       </Link>
     </div>
     <div className="app-title">
-      <span>Cryptocurrency</span>
+      <span>Cryprocurrency</span>
     </div>
     <div className="app-icons">
       <div className="bitcoin">
