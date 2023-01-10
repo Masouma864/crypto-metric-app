@@ -65,7 +65,7 @@
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- [crypto-metric-app][Live Demo](https://crypto-metric-app.vercel.app/)
+- [crypto-metric-app Live Demo](https://crypto-metric-app.vercel.app/)
 
 ## Loom Presentation Video Link
 - [Project Documentation](https://www.loom.com/share/0ae641f884a74d2184746bbb2de4e63b)
