@@ -1,3 +1,5 @@
+# crypto-metric-app
+
 <div align="center">
 
   <h3><b>Microverse README Template</b></h3>
@@ -180,9 +182,4 @@ Feel free to check the [issues page](../../issues/).
 This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-
 
