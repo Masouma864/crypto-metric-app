@@ -1,12 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import cryptoReducer from './Coins/coinsSlice';
-import detailReducer from './Coins/coinSlice';
+import listReducer from './TvSeries/tvSeriesListSlice';
+import detailReducer from './TvSeries/tvSeriesSlice';
 
 const store = configureStore({
   reducer: {
-    coins: cryptoReducer,
+    list: listReducer,
     detail: detailReducer,
   },
 });
-
 export default store;

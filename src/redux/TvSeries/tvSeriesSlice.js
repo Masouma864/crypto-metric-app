@@ -1,16 +1,14 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const fetchDetail = createAsyncThunk('coins/Detail', async (id) => {
+const fetchDetail = createAsyncThunk('series/Detail', async (id) => {
   const response = await fetch(
-    `https://api.coinstats.app/public/v1/coins/${id}`,
+    `https://api.tvmaze.com/shows/${id}`,
   );
   const detail = await response.json();
-  const { coin } = detail;
-  return coin;
+  return detail;
 });
-
 const initialState = [];
-const detailSlice = createSlice({
+const tvSeriesSlice = createSlice({
   name: 'detail',
   initialState,
   extraReducers: (builder) => {
@@ -18,6 +16,6 @@ const detailSlice = createSlice({
   },
 });
 
-const { reducer } = detailSlice;
+const { reducer } = tvSeriesSlice;
 export { fetchDetail };
 export default reducer;

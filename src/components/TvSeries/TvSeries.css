@@ -1,0 +1,69 @@
+.tv-series-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+  
+  .info img {
+    border-radius: 5%;
+    height: 250px;
+    width: 200px;
+  }
+  .link p{
+    color:white;
+    text-align: left;
+    padding-left: 20px;
+  }
+  
+  .info p {
+    font-weight: 600;
+    font-size: xx-large;
+    text-align: left;
+  
+  }
+  .desc {
+    text-align: left;
+  }
+  
+
+  
+  .detail-col {
+    
+    width: 100%;
+   
+    padding: 25px;
+  }
+  
+
+  
+  .title {
+    font-size: x-large;
+    color: aliceblue;
+  }
+  
+
+  .tv-series-container{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding-right: 20px;
+  }
+
+  .genres{
+    text-align: left;
+  }
+  
